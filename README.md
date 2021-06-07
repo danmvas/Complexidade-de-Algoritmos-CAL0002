@@ -1,2 +1,4 @@
 # Complexidade-de-Algoritmos-CAL
-Repostas de exercícios de Complexidade de Algoritmos, com o prof Cristiano Vasconcellos.
+Exercícios feitos para a matéria de Complexidade de Algoritmos, com o professor Cristiano Vasconcellos.
+
+- Plágio é crime e é passível de processo acadêmico.
