@@ -66,8 +66,8 @@ T key_breaker<T>::fast_factorization(T value) // Pollar-Rho: O(N^(1/4) * log(N))
 	}
 
     auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(stop - start);
-    cout << "Tempo de fast factoriation: " << duration.count() << " ms" << endl;
+    auto duration = duration_cast<microseconds>(stop - start);
+    cout << "Tempo de fast factoriation: " << duration.count() << " microseconds" << endl;
 
 
 	return gcd(prd, value);

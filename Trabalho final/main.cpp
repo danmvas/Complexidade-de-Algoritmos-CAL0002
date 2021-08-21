@@ -16,15 +16,15 @@ int main(int argc, char const *argv[])
     key_generator< boost::multiprecision::uint1024_t> kg(n);
     cout << kg.public_key_1 << " " << kg.public_key_2 << " " << kg.private_key << endl;
     auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(stop - start);
-    cout << "Tempo para gerar chaves de tamanho "<< n << ": " << duration.count() << "ms" << endl;
+    auto duration = duration_cast<microseconds>(stop - start);
+    cout << "Tempo para gerar chaves de tamanho "<< n << ": " << duration.count() << " microseconds" << endl;
 
     auto start1 = high_resolution_clock::now();
     key_breaker< boost::multiprecision::uint1024_t> kb(kg.public_key_1, kg.public_key_2);
     cout << kb.public_key_1 << " " << kb.public_key_2 << " " << kb.private_key << endl; 
     auto stop1 = high_resolution_clock::now();
-    auto duration1 = duration_cast<milliseconds>(stop1 - start1);
-    cout << "Tempo para quebrar chaves de tamanho "<< n << ": " << duration1.count() << "ms" << endl;
+    auto duration1 = duration_cast<microseconds>(stop1 - start1);
+    cout << "Tempo para quebrar chaves de tamanho "<< n << ": " << duration1.count() << " microseconds" << endl;
 
     return 0;
 }
